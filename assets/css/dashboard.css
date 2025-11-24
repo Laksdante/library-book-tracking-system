@@ -1,0 +1,442 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f8fc;
+  color: #033B5C;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background: #033B5C;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f0f8ff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #f0f8ff;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #005f99;
+  border-radius: 5px;
+}
+
+.sidebar .logout {
+  color: #ffb3b3;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 230px;
+  padding: 30px;
+  flex: 1;
+}
+
+header h1 {
+  font-size: 22px;
+  color: #033B5C;
+  margin: 0;
+}
+
+header p {
+  color: #5595CC;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #033B5C;
+}
+
+.card p {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Blue Variants */
+.blue { border-top: 4px solid #033B5C; }
+.navy { border-top: 4px solid #005f99; }
+.sky { border-top: 4px solid #5595CC; }
+.lightblue { border-top: 4px solid #7ec8e3; }
+
+/* Top Navigation Bar */
+.topnav{
+    position: fixed;
+    top: 0;
+    left: 230px; /*Same width as the sidebar */
+    right: 0;
+    height: 60px;
+    background: #033b5c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: #f0f8ff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.topnav .left h1{
+    font-size: 18px;
+    margin: 0;
+    color: #f0f8ff;
+    letter-spacing: 0.5px;
+}
+
+.topnav .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.topnav .user{
+    font-weight: 600;
+    color: #e6f1ff;
+}
+
+.topnav .logout-btn{
+    text-decoration: none;
+    background: #5595cc;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.topnav .logout-btn:hover{
+    background: #005f99;
+}
+/* Adjust main content padding to account for fixed topnav */
+.main-content {
+    margin-left: 230px;
+    margin-top: 80px;
+    padding: 30px;
+    flex: 1;
+}
+
+/* Container styling */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+/* Page header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add Member button */
+.add-btn {
+    padding: 9px 16px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    background: #033B5C;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background: #025187;
+}
+
+/* Styled status badges */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.active {
+    background: #2E8B57;     /* Green */
+}
+
+.badge.archived {
+    background: #CE2B14;     /* Red */
+}
+
+/* Small buttons */
+.btn-small-blue,
+.btn-small-red,
+.btn-small-gray {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-right: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.btn-small-blue {
+    background: #5595CC;
+    color: white;
+}
+
+.btn-small-blue:hover {
+    background: #357ab7;
+}
+
+.btn-small-red {
+    background: #CE2B14;
+    color: white;
+}
+
+.btn-small-red:hover {
+    background: #a52010;
+}
+
+.btn-small-gray {
+    background: #ccc;
+    color: #333;
+    cursor: not-allowed;
+}
+
+/* Styled table adjustments */
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/*Responsive design for all screen sizes*/
+
+/*Make table scroll on small screens*/
+
+.table-container {
+  overflow-x: auto;
+}
+
+/*Search box full width on small screens */
+
+.search-box{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Make header stack on small screens */
+.page-header {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.page-header h2 {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+}
+
+/* Buttons adapt */
+.add-btn,
+.btn-small-blue,
+.btn-small-red,
+.btn-small-gray {
+    white-space: nowrap;
+}
+
+/* Pagination responsive */
+.pagination {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* Make main content comfortable on mobile */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+        margin-left: 0; /* if sidebar collapses */
+    }
+}
+
+/* Sidebar responsiveness */
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .topnav {
+        left: 180px;
+    }
+}
+
+/* Collapse sidebar for very small screens */
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: fixed;
+        left: -200px;
+        width: 200px;
+        transition: left 0.3s ease;
+        z-index: 10;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    /* A simple toggle button inside topnav */
+    .menu-toggle {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    /* Topnav expands full width */
+    .topnav {
+        left: 0 !important;
+    }
+
+    .main-content {
+        margin-top: 70px;
+        margin-left: 0;
+    }
+}
+
+/* -----------------------------------------------------------
+   RESPONSIVE DESIGN — APPLIES TO ALL DASHBOARD MODULES
+------------------------------------------------------------*/
+
+/* Table scroll on small screens */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Forms scale properly */
+.form-container input,
+.form-container select {
+    width: 100%;
+}
+
+/* Search box responsive */
+.search-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.search-box input {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Page header responsive */
+.page-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.page-header h2 {
+    flex: 1 1 100%;
+}
+
+/* Pagination responsive */
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Sidebar compact on medium screens */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 180px;
+    }
+    .topnav {
+        left: 180px;
+    }
+}
+
+/* FULL mobile mode */
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: fixed;
+        left: -220px;
+        width: 220px;
+        z-index: 10;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+        cursor: pointer;
+        margin-right: 12px;
+        display: inline-block;
+    }
+
+    .topnav {
+        left: 0 !important;
+        justify-content: space-between;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
