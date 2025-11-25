@@ -4,11 +4,6 @@ include('../../db_connect.php');
 include('../../includes/csrf.php');
 
 
-//if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    //header("location: borrow_book.php");
-  //  exit();
-//}
-
 if(!verify_csrf_token($_POST['csrf_token'])){
     die("Invalid CSRF token.");
 }
