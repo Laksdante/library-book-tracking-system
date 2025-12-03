@@ -1,5 +1,4 @@
 <?php
-// staff/reports/export_pdf.php
 // Generates a blue-themed overview PDF (tables only) using DOMPDF
 
 require '../../vendor/autoload.php'; // Composer autoload
