@@ -20,15 +20,20 @@ $fines_count = $conn->query("SELECT COUNT(*) AS total FROM fines")->fetch_assoc(
 </head>
 <body>
 <!-- Sidebar -->
+<!-- Sidebar -->
 <div class="sidebar">
-  <h2>Admin Panel</h2>
+  <h2><?= $_SESSION['role'] === 'admin' ? 'Admin Panel' : 'Staff Panel'; ?></h2>
   <ul>
-    <li><a href="../staff/dashboard.php">🏠 Dashboard</a></li>
-    <li><a href="../staff/books/view_books.php">📚 Books</a></li>
-    <li><a href="../staff/members/view_members.php">👥 Members</a></li>
-    <li><a href="../staff/borrow/borrow_book.php">🔄 Borrow/Return</a></li>
-    <li><a href="../staff/fines/view_fines.php">💰 Fines</a></li>
-    <li><a href="../staff/reports/index.php">📊 Reports</a></li>
+    <li><a href="<?= base_url('staff/dashboard.php'); ?>">🏠 Dashboard</a></li>
+    <li><a href="<?= base_url('staff/books/view_books.php'); ?>">📚 Books</a></li>
+    <li><a href="<?= base_url('staff/members/view_members.php'); ?>">👥 Members</a></li>
+    <li><a href="<?= base_url('staff/borrow/borrow_book.php'); ?>">🔄 Borrow / Return</a></li>
+    <li><a href="<?= base_url('staff/fines/view_fines.php'); ?>">💰 Fines</a></li>
+
+    <?php if ($_SESSION['role'] === 'admin'): ?>
+        <li><a href="<?= base_url('staff/staff/view_staff.php'); ?>">👤 Staff Management</a></li>
+        <li><a href="<?= base_url('staff/reports/index.php'); ?>">📊 Reports</a></li>
+    <?php endif; ?>
   </ul>
 </div>
 

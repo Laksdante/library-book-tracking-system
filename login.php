@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Successful staff login
                 $_SESSION['staff_id'] = $staff['id'];
                 $_SESSION['username'] = $staff['username'];
-                $_SESSION['role'] = 'staff';
+                $_SESSION['role'] = 'admin';
 
                 header("Location: staff/dashboard.php");
                 exit();

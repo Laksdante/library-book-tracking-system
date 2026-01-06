@@ -440,3 +440,38 @@ header p {
         padding: 20px;
     }
 }
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-admin { background: #033B5C; color: #fff; }
+.badge-staff { background: #5595CC; color: #fff; }
+
+.badge-active { background: #2E8B57; color: #fff; }
+.badge-disabled { background: #CE2B14; color: #fff; }
+
+.btn-primary {
+    background: #033B5C;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.btn-danger { background: #CE2B14; color: #fff; }
+.btn-success { background: #2E8B57; color: #fff; }
